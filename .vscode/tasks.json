@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build C Program",
+      "type": "shell",
+      "command": "mkdir",
+      "args": [
+        "-p",
+        "${workspaceFolder}/build/Debug"
+      ],
+      "problemMatcher": [],
+      "detail": "Ensure the build/Debug directory exists."
+    },
+    {
+      "label": "Compile C Program",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/build/Debug/outC.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compile the C program into build/Debug."
+    },
+    {
+      "label": "Build C++ Program",
+      "type": "shell",
+      "command": "mkdir",
+      "args": [
+        "-p",
+        "${workspaceFolder}/build/Debug"
+      ],
+      "problemMatcher": [],
+      "detail": "Ensure the build/Debug directory exists."
+    },
+    {
+      "label": "Compile C++ Program",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/build/Debug/outCpp.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compile the C++ program into build/Debug."
+    }
+  ]
+}
